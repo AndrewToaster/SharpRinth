@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRinth", "SharpRinth.csproj", "{E75D8EE1-6699-48CE-A5B4-5E46210AD985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRinthTests", "..\SharpRinthTests\SharpRinthTests.csproj", "{1D605CC9-DF2D-41C0-9BB2-82949FA6FF40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E75D8EE1-6699-48CE-A5B4-5E46210AD985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75D8EE1-6699-48CE-A5B4-5E46210AD985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75D8EE1-6699-48CE-A5B4-5E46210AD985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75D8EE1-6699-48CE-A5B4-5E46210AD985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D605CC9-DF2D-41C0-9BB2-82949FA6FF40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D605CC9-DF2D-41C0-9BB2-82949FA6FF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D605CC9-DF2D-41C0-9BB2-82949FA6FF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D605CC9-DF2D-41C0-9BB2-82949FA6FF40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF3873DE-777C-4038-A54D-B96D5A9A5545}
+	EndGlobalSection
+EndGlobal
