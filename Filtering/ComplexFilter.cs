@@ -7,6 +7,9 @@ using SharpRinth.MeiliSearch;
 
 namespace SharpRinth.Filtering
 {
+    /// <summary>
+    /// Complex search filter using MeiliSearch strings
+    /// </summary>
     public sealed class ComplexFilter : ISearchFilter
     {
         public MeiliString Categories { get; set; }
@@ -25,6 +28,10 @@ namespace SharpRinth.Filtering
 
         public override string ToString() => ToQueryString();
 
+        /// <summary>
+        /// Creates and returns a web-formatted query
+        /// </summary>
+        /// <returns>The query created</returns>
         public string ToQueryString()
         {
             StringBuilder builder = new();

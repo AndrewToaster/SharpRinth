@@ -7,7 +7,7 @@ using System.Web;
 
 namespace SharpRinth.Utility
 {
-    public class QueryBuilder
+    internal class QueryBuilder
     {
         private readonly StringBuilder _builder;
         private int _qCount;

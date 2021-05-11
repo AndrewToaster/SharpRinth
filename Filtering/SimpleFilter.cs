@@ -9,12 +9,35 @@ using SharpRinth.Versioning;
 
 namespace SharpRinth.Filtering
 {
+    /// <summary>
+    /// Simple search filter
+    /// </summary>
     public sealed class SimpleFilter : ISearchFilter
     {
+        /// <summary>
+        /// Filter for Server-Side dependence
+        /// </summary>
         public SideDependence ServerDependence { get; set; }
+
+        /// <summary>
+        /// Filter for Client-Side dependence
+        /// </summary>
         public SideDependence ClientDependence { get; set; }
 
+        /// <summary>
+        /// Filter for allowed versions
+        /// </summary>
+        /// <remarks>
+        /// Values are joined together using the 'OR' operator
+        /// </remarks>
         public List<IGameVersion> Versions { get; set; }
+
+        /// <summary>
+        /// Filter for required categories
+        /// </summary>
+        /// <remarks>
+        /// Values are joined together using the 'AND' operator
+        /// </remarks>
         public List<ModCategory> Categories { get; set; }
 
         public SimpleFilter()
@@ -30,6 +53,10 @@ namespace SharpRinth.Filtering
             return ToQueryString();
         }
 
+        /// <summary>
+        /// Creates and returns a web-formatted query
+        /// </summary>
+        /// <returns>The query created</returns>
         public string ToQueryString()
         {
             StringBuilder builder = new();

@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/AndrewToaster/SharpRinth</RepositoryUrl>
     <RepositoryType>Source</RepositoryType>
     <PackageTags>c#,modrinth,api,wrapper,AndrewToasterr,labrinth</PackageTags>
-    <Description>Pre-Release (Unfinished documentation, functional)</Description>
+    <Description>A C# wrapper for the Modrinth/Labrinth API</Description>
     <PackageIcon>SharpRinth.png</PackageIcon>
     <ApplicationIcon>SharpRinth.ico</ApplicationIcon>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>

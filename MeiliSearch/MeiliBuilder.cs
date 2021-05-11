@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace SharpRinth.MeiliSearch
 {
+    /// <summary>
+    /// Helper class for building MeiliSearch queries
+    /// </summary>
     public sealed class MeiliBuilder
     {
         #region Tokens
@@ -115,48 +118,85 @@ namespace SharpRinth.MeiliSearch
         private readonly StringBuilder _builder;
         private readonly string _token;
 
+        /// <summary>
+        /// Creates a new instance of <see cref="MeiliBuilder"/> using a specified <paramref name="meiliToken"/>
+        /// </summary>
+        /// <param name="meiliToken"></param>
         public MeiliBuilder(string meiliToken)
         {
             _builder = new();
             _token = meiliToken;
         }
 
+        /// <summary>
+        /// Appends a 'AND' logical operator
+        /// </summary>
         public MeiliBuilder And()
         {
             _builder.Append(" AND");
             return this;
         }
 
+        /// <summary>
+        /// Appends a selector operator
+        /// </summary>
+        /// <remarks>
+        /// Operator syntax: <c>token="value"</c>
+        /// </remarks>
+        /// <param name="value">The value to match</param>
         public MeiliBuilder Value(string value)
         {
             _builder.Append(' ').Append(_token).Append("=\"").Append(value).Append('"');
             return this;
         }
 
+        /// <summary>
+        /// Appends a selector operator
+        /// </summary>
+        /// <remarks>
+        /// Operator syntax: <c>token="value"</c>
+        /// </remarks>
+        /// <param name="value">The value to match</param>
         public MeiliBuilder Value<T>(T value)
         {
             _builder.Append(' ').Append(_token).Append("=\"").Append(value).Append('"');
             return this;
         }
 
+        /// <summary>
+        /// Appends a group
+        /// </summary>
+        /// <remarks>
+        /// Operator syntax: <c>token="value"</c>
+        /// </remarks>
+        /// <returns>A builder for a group</returns>
         public MeiliGroup<MeiliBuilder> Group()
         {
             _builder.Append(" (");
             return new MeiliGroup<MeiliBuilder>(this, _token, _builder);
         }
 
+        /// <summary>
+        /// Appends a 'OR' logical operator
+        /// </summary>
         public MeiliBuilder Or()
         {
             _builder.Append(" OR");
             return this;
         }
 
+        /// <summary>
+        /// Appends a 'NOT' logical operator
+        /// </summary>
         public MeiliBuilder Not()
         {
             _builder.Append(" NOT");
             return this;
         }
 
+        /// <summary>
+        /// Builds a new <see cref="MeiliString"/> from input
+        /// </summary>
         public MeiliString Build()
         {
             return new(_builder.ToString()[1..]);

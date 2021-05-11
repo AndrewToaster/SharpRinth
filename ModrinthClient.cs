@@ -46,7 +46,7 @@ namespace SharpRinth
         }
 
         /// <summary>
-        /// Returns a new <see cref="ModSearchRequestBuilder"/> for building a search query
+        /// Returns a new <see cref="ModSearchRequestBuilder"/> for building a mod search query
         /// </summary>
         public ModSearchRequestBuilder SearchMods()
         {
@@ -54,7 +54,7 @@ namespace SharpRinth
         }
 
         /// <summary>
-        /// Returns a new <see cref="ModIdRequestBuilder"/> for building a mod id search query
+        /// Returns a new <see cref="ModIdRequestBuilder"/> for building a mod id query
         /// </summary>
         /// <param name="modId">The default id to set</param>
         public ModIdRequestBuilder GetMod(Identifier modId = default)
@@ -63,7 +63,7 @@ namespace SharpRinth
         }
 
         /// <summary>
-        /// Returns a new <see cref="UserRequestBuilder"/> for building a mod id search query
+        /// Returns a new <see cref="UserRequestBuilder"/> for building a user query
         /// </summary>
         /// <param name="userId">The default id to set</param>
         public UserRequestBuilder GetUser(Identifier userId = default)
@@ -72,7 +72,7 @@ namespace SharpRinth
         }
 
         /// <summary>
-        /// Returns a new <see cref="ReleasesSearchRequestBuilder"/> for building a mod id search query
+        /// Returns a new <see cref="ReleasesSearchRequestBuilder"/> for building a release ids query
         /// </summary>
         /// <param name="modId">The default id to set</param>
         public ReleasesSearchRequestBuilder GetReleases(Identifier modId = default)
@@ -81,7 +81,7 @@ namespace SharpRinth
         }
 
         /// <summary>
-        /// Returns a new <see cref="ReleaseRequestBuilder"/> for building a mod id search query
+        /// Returns a new <see cref="ReleaseRequestBuilder"/> for building a release query
         /// </summary>
         /// <param name="releaseId">The default id to set</param>
         public ReleaseRequestBuilder GetRelease(Identifier releaseId = default)
@@ -89,9 +89,7 @@ namespace SharpRinth
             return new(this, releaseId);
         }
 
-        /// <summary>
-        /// Disposes the inner <see cref="HttpClient"/>
-        /// </summary>
+        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose()
         {
             GC.SuppressFinalize(this);

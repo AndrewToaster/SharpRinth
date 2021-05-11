@@ -14,7 +14,7 @@ namespace SharpRinth.Converters
 
         public override void Write(Utf8JsonWriter writer, Identifier value, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value.Id);
+            writer.WriteStringValue(value.IdString);
         }
     }
 }

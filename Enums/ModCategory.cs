@@ -24,7 +24,14 @@ namespace SharpRinth.Enums
         Equipment,
         Miscellaneous,
 
+        /// <summary>
+        /// 'Fabric' means the FabricMC mod-loader
+        /// </summary>
         Fabric,
+
+        /// <summary>
+        /// 'Forge' means the Forge mod-loader
+        /// </summary>
         Forge
     }
 }

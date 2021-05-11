@@ -16,7 +16,7 @@ namespace SharpRinth
         /// <summary>
         /// The text representation of the identifier
         /// </summary>
-        public string Id { get; }
+        public string IdString { get; }
 
         private static readonly Regex _reg;
 
@@ -36,7 +36,7 @@ namespace SharpRinth
         {
             if (_reg.TryMatch(id, out Match match))
             {
-                Id = match.Captures[0].Value;
+                IdString = match.Captures[0].Value;
             }
             else
             {
@@ -44,9 +44,11 @@ namespace SharpRinth
             }
         }
 
+        /// <summary>Returns the string representation of this <see cref="Identifier"/></summary>
+        /// <returns>The <see cref="IdString"/></returns>
         public override string ToString()
         {
-            return Id;
+            return IdString;
         }
     }
 }
