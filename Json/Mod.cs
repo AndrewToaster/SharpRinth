@@ -18,12 +18,12 @@ namespace SharpRinth.Json
         public string Description { get; set; }
 
         [JsonPropertyName("body")]
-        public string MarkupBody { get; set; }
+        public string MarkdownBody { get; set; }
 
         /*
         [Obsolete("Dunno man, Modrinth API says it's obsolete")]
         [JsonPropertyName("body_url")]
-        public string MarkupBodyUrl { get; set; }
+        public string MarkdownBodyUrl { get; set; }
         */
 
         [JsonPropertyName("published")]
